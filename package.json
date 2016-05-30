@@ -11,6 +11,11 @@
   "scripts": {
     "test": "karma start"
   },
+  "scripts": {
+    "preinstall": "npm install autodts",
+    "postinstall": "autodts link",
+    "prepublish": "tsc && autodts generate"
+  },
   "contributors": [
     "Adam Klein <adam@500tech.com>"
   ],
@@ -41,5 +46,8 @@
   "engines": {
     "node": ">= 4.2.1",
     "npm": ">= 3"
+  },
+  "typescript": {
+    "definition": "index.d.ts"
   }
 }
